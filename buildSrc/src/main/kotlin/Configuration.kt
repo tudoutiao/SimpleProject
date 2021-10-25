@@ -111,7 +111,7 @@ object Configuration {
         const val skin_support_version = "4.0.5"
 
         /** moshi 版本 */
-        const val moshi_version = "1.11.0"
+        const val moshi_version = "1.12.0"
 
         /** ARouter 版本 */
         const val arouter_version = "1.5.1"
@@ -229,9 +229,9 @@ object Configuration {
         const val androidx_navigation_common =
             "androidx.navigation:navigation-common:${Versions.navigation_version}"
         const val androidx_navigation_fragment_ktx =
-            "androidx.navigation:navigation-fragment-ktx:${Versions.navigation_version}"
+            "androidx.navigation:navigation-fragment-ktx:2.3.5"
         const val androidx_navigation_ui_ktx =
-            "androidx.navigation:navigation-ui-ktx:${Versions.navigation_version}"
+            "androidx.navigation:navigation-ui-ktx:2.3.5"
         const val androidx_navigation_runtime_ktx =
             "androidx.navigation:navigation-runtime-ktx:${Versions.navigation_version}"
         const val androidx_navigation_common_ktx =
@@ -248,7 +248,8 @@ object Configuration {
          * - 指南：[https://www.kotlincn.net/docs/reference/coroutines/coroutines-guide.html]
          * - Github：[https://github.com/Kotlin/kotlinx.coroutines]
          */
-        const val kotlin_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0"
+        const val kotlin_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
+        const val kotlin_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
 
         /**
          * kotlin Json 序列化
@@ -268,6 +269,7 @@ object Configuration {
          */
         const val moshi = "com.squareup.moshi:moshi:${Versions.moshi_version}"
         const val moshi_kt = "com.squareup.moshi:moshi-kotlin:${Versions.moshi_version}"
+        const val moshi_codegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi_version}"
 
         /**
          * Klaxon
@@ -312,8 +314,7 @@ object Configuration {
         const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp_version}"
         const val okhttp_urlconnection =
             "com.squareup.okhttp3:okhttp-urlconnection:${Versions.okhttp_version}"
-        const val okhttp_logging =
-            "com.squareup.okhttp:logging-interceptor:${Versions.okhttp_version}"
+        const val okhttp_logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp_version}"
 
         /**
          * okio

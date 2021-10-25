@@ -4,17 +4,24 @@ plugins {
     kotlin("kapt")
     kotlin("plugin.serialization") version Configuration.Versions.kotlin_version
     id("kotlin-parcelize")
+    id("kotlin-android")
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(Configuration.AppConfigs.compile_sdk_version)
+
 
     defaultConfig {
         applicationId = "com.my.composeapp"
-        minSdkVersion(21)
-        targetSdkVersion(30)
-        versionCode = 1
-        versionName = "1.0"
+        // 最低支持版本
+        minSdkVersion(Configuration.AppConfigs.min_sdk_version)
+        // 目标 SDK 版本
+        targetSdkVersion(Configuration.AppConfigs.target_sdk_version)
+
+        // 应用版本号
+        versionCode = Configuration.AppConfigs.version_code
+        // 应用版本名
+        versionName = Configuration.AppConfigs.version_name
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -34,7 +41,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled  = false
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -42,7 +49,7 @@ android {
         }
 
         getByName("debug") {
-            isMinifyEnabled  = true
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -62,6 +69,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = Configuration.Versions.compose_version
@@ -83,6 +91,17 @@ dependencies {
     implementation(Configuration.Dependencies.androidx_compose_preview)
     implementation(Configuration.Dependencies.androidx_lifecycle_ktx)
     implementation(Configuration.Dependencies.androidx_compose_activity)
+    //协程
+    implementation(Configuration.Dependencies.kotlin_coroutines)
+    implementation(Configuration.Dependencies.kotlin_coroutines_android)
+    //
+
+    implementation(project(mapOf("path" to ":network")))
+    implementation(Configuration.Dependencies.androidx_constraint)
+    implementation(Configuration.Dependencies.androidx_lifecycle_livedata_ktx)
+    implementation(Configuration.Dependencies.androidx_lifecycle_viewmodel_ktx)
+    implementation(Configuration.Dependencies.androidx_navigation_fragment_ktx)
+    implementation(Configuration.Dependencies.androidx_navigation_ui_ktx)
     //test
     testImplementation(Configuration.Dependencies.test_junit)
     androidTestImplementation(Configuration.Dependencies.androidx_test_ext_junit)
