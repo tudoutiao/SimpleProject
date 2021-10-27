@@ -8,3 +8,6 @@
 rootProject.name = "ComposeApp"
 include (":app")
 include(":network")
+include(":news")
+include(":common")
+include(":base")

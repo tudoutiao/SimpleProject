@@ -35,6 +35,25 @@ class HomeViewModel : ViewModel() {
                     Log.e("MainActivity", "${result}")
                 }
             }
+
+
+            when (val result =
+                TencentNetworkWithEnvelopeApi.getService(TencentNewsApiInterface::class.java)
+                    .getProjectTree()) {
+                is NetworkResponse.Success -> {
+                    Log.e("MainActivity", "${result}")
+                }
+                is NetworkResponse.ApiError -> {
+                    Log.e("MainActivity", "${result}")
+                }
+                is NetworkResponse.NetworkError -> {
+                    Log.e("MainActivity", "${result}")
+                }
+                is NetworkResponse.UnknownError -> {
+                    Log.e("MainActivity", "${result}")
+                }
+            }
+
         }
     }
 }
