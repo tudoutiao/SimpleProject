@@ -8,15 +8,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Configuration.AppConfigs.compile_sdk_version)
+    compileSdk = Configuration.AppConfigs.compile_sdk_version
 
 
     defaultConfig {
         applicationId = "com.my.composeapp"
         // 最低支持版本
-        minSdkVersion(Configuration.AppConfigs.min_sdk_version)
+        minSdk = Configuration.AppConfigs.min_sdk_version
         // 目标 SDK 版本
-        targetSdkVersion(Configuration.AppConfigs.target_sdk_version)
+        targetSdk = Configuration.AppConfigs.target_sdk_version
 
         // 应用版本号
         versionCode = Configuration.AppConfigs.version_code

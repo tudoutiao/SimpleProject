@@ -1,4 +1,4 @@
-package com.my.news.newslist.views
+package com.my.news.newslist
 
 class NewsListRecyclerViewAdapter {
 }

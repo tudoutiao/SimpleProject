@@ -1,4 +1,4 @@
-package com.my.news.base
+package com.my.base.customview
 
 import android.content.Context
 import android.util.AttributeSet

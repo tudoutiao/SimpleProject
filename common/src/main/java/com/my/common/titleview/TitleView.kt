@@ -1,11 +1,12 @@
-package com.my.news.newslist.views.titleview
+package com.my.common.titleview
 
 import android.content.Context
 import android.view.View
 import android.widget.Toast
-import com.my.news.R
-import com.my.news.base.BaseCustomView
-import com.my.news.databinding.ItemTitleViewBinding
+import com.my.base.customview.BaseCustomView
+import com.my.common.R
+import com.my.common.databinding.ItemTitleViewBinding
+import com.my.news.newslist.views.titleview.TitleViewViewModel
 
 class TitleView(context: Context) :
     BaseCustomView<ItemTitleViewBinding, TitleViewViewModel>(context) {

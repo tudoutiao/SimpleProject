@@ -78,7 +78,7 @@ object Configuration {
         const val lifecycle_version = "2.3.1"
 
         /** activity 版本 */
-        const val activity_version = "1.1.0"
+        const val activity_version = "1.2.2"
 
         /** fragment 版本 */
         const val fragment_version = "1.2.5"

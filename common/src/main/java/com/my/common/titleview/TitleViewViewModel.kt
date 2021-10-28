@@ -1,6 +1,6 @@
 package com.my.news.newslist.views.titleview
 
-import com.my.news.base.BaseCustomViewModel
+import com.my.base.customview.BaseCustomViewModel
 
 class TitleViewViewModel : BaseCustomViewModel() {
     var title: String? = null

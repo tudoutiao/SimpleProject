@@ -1,6 +1,6 @@
 package com.my.news.newslist.views.imgview
 
-import com.my.news.base.BaseCustomViewModel
+import com.my.base.customview.BaseCustomViewModel
 
 class ImgTitleViewViewModel : BaseCustomViewModel() {
     var avatarUrl: String? = null
