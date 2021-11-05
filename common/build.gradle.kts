@@ -24,6 +24,7 @@ android {
         // DataBinding 开启
         dataBinding = true
         viewBinding = true
+        compose = true
     }
 
     // Java 版本配置
@@ -45,4 +46,15 @@ dependencies {
     implementation(Configuration.Dependencies.androidx_appcompat)
     implementation(Configuration.Dependencies.androidx_material)
     implementation(Configuration.Dependencies.androidx_constraint)
+
+    //loading dialog
+    implementation(Configuration.Dependencies.dialog_color)
+    implementation(Configuration.Dependencies.dialog_core)
+    implementation(Configuration.Dependencies.dialog_date)
+    implementation(Configuration.Dependencies.dialog_lifecycle)
+    implementation(Configuration.Dependencies.dialog_sheet)
+
+    //mmkv替换sharepreference
+    implementation(Configuration.Dependencies.mmkv)
+
 }

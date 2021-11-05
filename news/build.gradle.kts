@@ -14,16 +14,17 @@ android {
         applicationId = "com.my.news"
         minSdk = Configuration.AppConfigs.min_sdk_version
         targetSdk = Configuration.AppConfigs.target_sdk_version
-        versionCode =1
-        versionName="1.0"
+        versionCode = 1
+        versionName = "1.0"
 
-        testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildFeatures {
         // DataBinding 开启
         dataBinding = true
         viewBinding = true
+        compose = true
     }
 
     // Java 版本配置
@@ -40,6 +41,7 @@ android {
 dependencies {
 //    api(project(":common"))
     api(project(":network"))
+    api(project(":base"))
     implementation(Configuration.Dependencies.androidx_activity)
     implementation(Configuration.Dependencies.androidx_activity_ktx)
     implementation(Configuration.Dependencies.androidx_viewpager2)

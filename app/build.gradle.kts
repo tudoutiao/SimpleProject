@@ -83,6 +83,8 @@ android {
 }
 
 dependencies {
+
+    api(project(":common"))
     implementation(Configuration.Dependencies.androidx_core_ktx)
     implementation(Configuration.Dependencies.androidx_appcompat)
     implementation(Configuration.Dependencies.androidx_material)
@@ -102,6 +104,12 @@ dependencies {
     implementation(Configuration.Dependencies.androidx_lifecycle_viewmodel_ktx)
     implementation(Configuration.Dependencies.androidx_navigation_fragment_ktx)
     implementation(Configuration.Dependencies.androidx_navigation_ui_ktx)
+    //加载页面反馈管理框架
+    implementation(Configuration.Dependencies.loadsire)
+
+    //mmkv替换sharepreference
+    implementation(Configuration.Dependencies.mmkv)
+
     //test
     testImplementation(Configuration.Dependencies.test_junit)
     androidTestImplementation(Configuration.Dependencies.androidx_test_ext_junit)

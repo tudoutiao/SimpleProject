@@ -118,6 +118,12 @@ object Configuration {
 
         /**compose 版本*/
         const val compose_version = "1.0.1"
+
+        /**loading dialog 版本*/
+        const val dialogs_version = "3.3.0"
+
+        /**tencent mmkv版本*/
+        const val mmkv_version = "1.2.11"
     }
 
     /**
@@ -190,13 +196,20 @@ object Configuration {
             "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_version}"
         const val androidx_lifecycle_livedata_ktx =
             "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle_version}"
+
+        const val unpeek_livedata = "com.kunminx.arch:unpeek-livedata:7.2.0-beta1"
+
         /**androidx compose*/
-        const val androidx_compose_ui="androidx.compose.ui:ui:${Versions.compose_version}"
-        const val androidx_compose_material="androidx.compose.material:material:${Versions.compose_version}"
-        const val androidx_compose_preview="androidx.compose.ui:ui-tooling-preview:${Versions.compose_version}"
-        const val androidx_compose_activity="androidx.activity:activity-compose:1.3.0-alpha06"
-        const val androidx_compose_test_tool="androidx.compose.ui:ui-tooling:${Versions.compose_version}"
-        const val androidx_compose_test_ui="androidx.compose.ui:ui-test-junit4:${Versions.compose_version}"
+        const val androidx_compose_ui = "androidx.compose.ui:ui:${Versions.compose_version}"
+        const val androidx_compose_material =
+            "androidx.compose.material:material:${Versions.compose_version}"
+        const val androidx_compose_preview =
+            "androidx.compose.ui:ui-tooling-preview:${Versions.compose_version}"
+        const val androidx_compose_activity = "androidx.activity:activity-compose:1.3.0-alpha06"
+        const val androidx_compose_test_tool =
+            "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
+        const val androidx_compose_test_ui =
+            "androidx.compose.ui:ui-test-junit4:${Versions.compose_version}"
 
         /** androidx room */
         const val androidx_room_runtime = "androidx.room:room-runtime:${Versions.room_version}"
@@ -204,6 +217,20 @@ object Configuration {
         const val androidx_room_ktx = "androidx.room:room-ktx:${Versions.room_version}"
         const val androidx_room_rxjava2 = "androidx.room:room-rxjava2:${Versions.room_version}"
         const val androidx_room_testing = "androidx.room:room-testing:${Versions.room_version}"
+
+        /** loading */
+        //dialog
+        const val dialog_lifecycle =
+            "com.afollestad.material-dialogs:lifecycle:${Versions.dialogs_version}"
+        const val dialog_core = "com.afollestad.material-dialogs:core:${Versions.dialogs_version}"
+        const val dialog_color = "com.afollestad.material-dialogs:color:${Versions.dialogs_version}"
+        const val dialog_date =
+            "com.afollestad.material-dialogs:datetime:${Versions.dialogs_version}"
+        const val dialog_sheet =
+            "com.afollestad.material-dialogs:bottomsheets:${Versions.dialogs_version}"
+
+        /**mmkv*/
+        const val mmkv = "com.tencent:mmkv-static:${Versions.mmkv_version}"
 
         /** androidx paging */
         const val androidx_paging_runtime =
@@ -249,7 +276,8 @@ object Configuration {
          * - Github：[https://github.com/Kotlin/kotlinx.coroutines]
          */
         const val kotlin_coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
-        const val kotlin_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
+        const val kotlin_coroutines_android =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
 
         /**
          * kotlin Json 序列化
@@ -269,7 +297,8 @@ object Configuration {
          */
         const val moshi = "com.squareup.moshi:moshi:${Versions.moshi_version}"
         const val moshi_kt = "com.squareup.moshi:moshi-kotlin:${Versions.moshi_version}"
-        const val moshi_codegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi_version}"
+        const val moshi_codegen =
+            "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi_version}"
 
         /**
          * Klaxon
@@ -314,7 +343,8 @@ object Configuration {
         const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp_version}"
         const val okhttp_urlconnection =
             "com.squareup.okhttp3:okhttp-urlconnection:${Versions.okhttp_version}"
-        const val okhttp_logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp_version}"
+        const val okhttp_logging =
+            "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp_version}"
 
         /**
          * okio
@@ -398,5 +428,10 @@ object Configuration {
          */
         const val arouter_api = "com.alibaba:arouter-api:${Versions.arouter_version}"
         const val arouter_compiler = "com.alibaba:arouter-compiler:${Versions.arouter_version}"
+
+        /**
+         * 加载反馈页管理框架
+         * */
+        const val loadsire = "com.kingja.loadsir:loadsir:1.3.8"
     }
 }

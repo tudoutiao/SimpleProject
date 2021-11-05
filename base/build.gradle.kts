@@ -43,5 +43,9 @@ dependencies {
     implementation(Configuration.Dependencies.androidx_appcompat)
     implementation(Configuration.Dependencies.androidx_material)
     implementation(Configuration.Dependencies.androidx_constraint)
-
+    implementation(Configuration.Dependencies.androidx_lifecycle_ktx)
+    implementation(Configuration.Dependencies.androidx_activity)
+    implementation(Configuration.Dependencies.androidx_activity_ktx)
+    //解决livedata倒灌
+    implementation(Configuration.Dependencies.unpeek_livedata)
 }
